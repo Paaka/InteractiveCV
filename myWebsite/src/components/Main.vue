@@ -1,10 +1,10 @@
 <template>
     <div class="welcome">
         <div class="welcome__heading">
-             <h1>Hello !</h1>
+             <h1 >Hello !</h1>
         </div>
-        <vue-typer text="My name is Matt and I'm Junior Front-end developer"></vue-typer><br/>
-        <button>Learn More</button>
+        <vue-typer text="My name is Matt and I'm Junior Front-end developer."></vue-typer><br/>
+        <button class="welcome__button">Learn More</button>
     </div>
 </template>
 <script>
@@ -32,12 +32,30 @@ export default {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    -webkit-clip-path:polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
 
     &__heading{
         filter: brightness(100%);
         display: flex;
         align-items: flex-start;
         margin-right: 2rem;
+    }
+
+    &__button{
+        background-color: transparent;
+        border: 2px solid white;
+        padding: 2rem 8rem;
+        color:white;
+        font-size: 2rem;
+        text-transform: uppercase;
+        transition: .3s all;
+
+        &:hover{
+            background-color: white;
+            color:#666;
+            border:none;
+        }
     }
 }
 
